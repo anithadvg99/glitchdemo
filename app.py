@@ -33,5 +33,5 @@ def index():
     index=np.argmax(y)
     return f"Predicted index : {index}"
 
-
-# app.run()
+if __name__=='__main__':
+    app.run(debug=False,host="0.0.0.0")
