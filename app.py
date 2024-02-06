@@ -27,11 +27,13 @@ model=load_model(pickle_file_path)
 
 @app.route('/')
 def index():
-    tdata=np.array([[7,144,197,23.8494014,94.34814995,6.133220586,114.0512495]])
-    y = model.predict(tdata)
-    # print(y)
-    index=np.argmax(y)
-    return f"Predicted index : {index}"
+    # tdata=np.array([[7,144,197,23.8494014,94.34814995,6.133220586,114.0512495]])
+    # y = model.predict(tdata)
+    # # print(y)
+    # index=np.argmax(y)
+    # return f"Predicted index : {index}"
+
+    return render_template('index.html')
 
 if __name__=='__main__':
     app.run(debug=False,host="0.0.0.0")
